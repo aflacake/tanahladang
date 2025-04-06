@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100vh;
+      font-family: times new roman;
+    overflow: hidden;
+}
+body {
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: background-color 1s ease;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* bukan portait */
+}
+
+
+.pesanLanskap {
+    display: none;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%, -50%);
+    font-size: 24px;
+    color: black;
+}
+.content {
+    display: block;
+}
+
+.headerJud {
+    padding: 20px 20px;
+    background-color: #0B932D;
+    border-radius: 0 0 0 250px;
+}
+	#judulLogo {
+		float: right;
+		padding: 5px;
+	}
+    #judul, #judul2 {
+        text-align: right;
+    }
+
+
+
+.kotaKota {
+    height: 100px;
+    background-color: #0B932D;
+    border-radius: 15px 15px 0 0;
+    border-top: 10px solid #A46D16;
+}
+
+
+.tanahLadang {
+    width: 100%;
+    display: inline-block;
+}
+    #konten1 > p {
+        padding: 5px 5px;
+        font-size: 16px;
+        text-align: right;
+    }
+    
+    #konten2 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: #90FFB2;
+    }
+    #konten2 > p {
+        padding: 5px 10px;
+    }
+
+#farm {
+    display: grid;
+    grid-template-columns: repeat(17, 60px);
+    grid-gap: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%, -50%);
+    background-color: #0B932D;
+    border: 1px solid #755727;
+    border-radius: 1px 1px 0 0;
+}
+    .tanah {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        position: relative; /* mengatur absolute */
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: #755727;
+        text-align: center;
+        line-height: 60px;
+        border: 4px solid #A46D16;
+        border-radius: 15%;
+        cursor: pointer;
+    }
+        .tertanam {
+            font-size: 6px;
+        }
+        .timer {
+            position: absolute;
+        top: -5px;
+            left: 10px;
+            bottom: 0;
+            font-size: 6px;
+            padding: 2px 5px;
+            color: black;
+            border-radius: 5%;
+            z-index: 10;
+        }
+        .gambarTanamanMerah {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            font-size: 9px;
+            color: white;
+            z-index: 5;
+        }
+        .panen {
+            background-color: #755727;
+            font-size: 9px;
+            color: white;
+       }
+.ternakKambing {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+        padding: 4px 5px;
+        background-color: #0B932D;
+        border-radius: 0 0 15px 15px;
+        border-bottom: 10px solid #A46D16;
+}
+    #anakKambing {
+        position: sticky;
+        left: 0;
+            padding-left: 10px;
+        animation: gerakAnakKambing 27s linear infinite;
+        }
+        @keyframes gerakAnakKambing {
+            0% {
+                left: 0;
+            }
+            50% {
+                left: 20%;
+            }
+            100% {
+                left: 0;
+            }
+        }
+        #kambingBetina {
+        position: sticky;
+        right: 0;
+        padding-left: 30px;
+        animation: gerakKambingBetina 40s linear infinite;
+        }
+        @keyframes gerakKambingBetina {
+            0% {
+                right: 0;
+            }
+            50% {
+                right: 100%;
+            }
+            100% {
+                right: 0;
+            }
+        }
+    #kambingJantan {
+        position: sticky;
+        right: 0;
+            padding-left: 20px;
+        animation: gerakKambingJantan 30s linear infinite;
+        }
+        @keyframes gerakKambingJantan {
+            0% {
+                right: 0;
+            }
+            50% {
+                right: 100%;
+            }
+            100% {
+                right: 0;
+            }
+        }
+.btnFeed {
+    padding: 5px 8px;
+         cursor: pointer;
+         background-color: #755727;
+         border: none;
+         border-radius: 5px;
+}
+.kumpulanKambing {
+    width: 50%;
+}
+.menuKambing {
+    width: 50%;    
+}
+#sumur {
+    float: right;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+
+   
+ /* menu */
+ .menuGim {
+     margin-top: 20px;
+     padding: 5px 10px;
+     background-color: #755727;
+     border: 4px solid #A46D16;
+ }
+ #tokoBibit, #beliBibitBtn, #beliBibitSuperBtn, #panduanBermain, #dataMu, #resetGimBtn, #kisah {
+     padding: 5px 8px;
+     cursor: pointer;
+     background-color: #0B932D;
+     border: none;
+     border-radius: 5px;
+ }
+     /* popUp */
+    /* transaksi */
+     .popTokoBibit {
+         width: 100%;
+         height: 100%;
+         display: none;
+         position: fixed;
+         top: 0;
+         left: 0;
+         background-color: rgba(0, 0, 0, 0.4); /* transparan */
+         z-index: 15;
+     }
+     .kontenTokoBibit {
+         width: 80%;
+         max-width: 400px;
+         margin: 15% auto;
+         padding: 20px;
+         background-color: #755727;
+     }
+
+     /* panduan */
+     .popPanduanBermain {
+         width: 100%;
+         height: 100%;
+         display: none;
+         position: fixed;
+         top: 0;
+         left: 0;
+         background-color: rgba(0, 0, 0, 0.4); /* transparan */
+         z-index: 15;
+     }
+     .kontenPanduan {
+         width: 80%;
+         max-width: 400px;
+         margin: 15% auto;
+         padding: 20px;
+         background-color: #755727;
+     }
+     
+     /* data */
+     .popDataMu {
+         width: 100%;
+         height: 100%;
+         display: none;
+         position: fixed;
+         top: 0;
+         left: 0;
+         background-color: rgba(0, 0, 0, 0.4); /* transparan */
+         z-index: 15;
+     }
+     .kontenData {
+         width: 80%;
+         max-width: 400px;
+         margin: 15% auto;
+         padding: 20px;
+         background-color: #755727;
+     }
+     
+     /* kisah */
+     .popKisah {
+         width: 100%;
+         height: 100%;
+         display: none;
+         position: fixed;
+         top: 0;
+         left: 0;
+         background-color: rgba(0, 0, 0, 0.4); /* transparan */
+         z-index: 15;
+     }
+     .kontenKisah {
+         width: 80%;
+         max-width: 400px;
+         margin: 15% auto;
+         padding: 20px;
+         background-color: #755727;
+     }
+     
+     /* close */
+ 
+ 
+ /* hiasan dekor */       
+.hiasan {
+    width: 100%;
+}
+#tanahHiasanBg {
+    width: 150px;
+    height: 150px;
+    background-color: #755727;
+    border-radius: 0 300px 0 0;
+}
+#tanahHiasanBg2 {
+    position: relative;
+    margin-top: -120px;
+    width: 175px;
+    height: 170px;
+    background-color: #0B932D;
+    border-radius: 0 250px 0 0;
+    border-right: 25px solid #A46D16;
+}
+#tanahHiasanBg3 {
+    float: right;
+    margin-top: -120px;
+    width: 125px;
+    height: 120px;
+    background-color: #0B932D;
+    border-radius: 250px 0 0 0;
+}
+#tanamMerahDekor {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-top: -100px;
+    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-size: cover;
+    background-position: center;
+}
+#tanamMerahDekor2 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-top: -20px;
+    margin-left: 70px;
+    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-size: cover;
+    background-position: center;
+}
+#tanamMerahDekor3 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-top: -120px;
+    margin-left: 70px;
+    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-size: cover;
+    background-position: center;
+}
+#tanamMerahDekor4 {
+    width: 40px;
+    height: 40px;
+    float: right;
+    position: relative;
+    margin-top: -110px;
+    margin-left: 70px;
+    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+@media (orientation: portait) {
+    .pesanLanskap {
+        height: 100vh;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%, -50%);
+        font-size: 24px;
+        color: black;
+        display: block;
+    }
+    .content {
+        display: none;
+    }
+}
