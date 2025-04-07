@@ -42,10 +42,8 @@ window.addEventListener('click', function(event) {
 function setBackgroundBerdasarkanWaktu() {
     const bgWaktuSaatIni = new Date().getHours();
     const body = document.body;
-    const h1A = document.getElementById("judul");
-    const pA = document.getElementById("deskrip");
-    const jamA = document.getElementById("jamA");
-    const waktuBermainA = document.getElementById("waktuBermain");
+    const lanskapMode = document.querySelector("pesanLanskap");
+    const headerJud = document.querySelector("headerJud");
     
     if (bgWaktuSaatIni >= 6 && bgWaktuSaatIni < 12) {
         body.style.backgroundColor = "#1EA3A8";
@@ -54,12 +52,52 @@ function setBackgroundBerdasarkanWaktu() {
     } else if (bgWaktuSaatIni >= 15 && bgWaktuSaatIni < 18) {
         body.style.backgroundColor = "#B6200C";
     } else {
-        body.style.backgroundColor = "#000000";   
+        body.style.backgroundColor = "#000000";
+	if (lanskapMode) {
+        	lanskapMode.style.color = "white";
+	}
+	if (headerJud) {
+		headerJud.style.color = "white";
+	}
     }
 }
 setBackgroundBerdasarkanWaktu();
 setInterval(setBackgroundBerdasarkanWaktu, 3600000);
 
+
+
+// cuaca
+function mendapatkanBulanIni() {
+	const currentDate = new Date();
+	return currentDate.getMonth();
+}
+function setCuacaDariBulan() {
+	const bulan = mendapatkanBulanIni();
+	const cuacaDiv = document.getElementById('cuaca');
+	const pesanDiv = document.getElementById('pesanCuaca');
+	
+	if (bulan >= 5 && bulan <= 8) {
+		// juni -  agustus
+		cuacaDiv.textContent = 'Cuaca panas';
+		pesanDiv.textContent = 'Nikmati cuaca yang cerah!';
+		cuacaDiv.classList.add('terik');
+		cuacaDiv.classList.remove('hujan');
+	} else if (bulan >=9 && bulan <= 11) {
+		// september - november
+		cuacaDiv.textContent = 'Cuaca hujan';
+		pesanDiv.textContent = 'Siapkan payung dan jas hujan, cuaca sedang hujan!';
+		cuacaDiv.classList.add('hujan');
+		cuacaDiv.classList.remove('terik');
+	} else {
+		// desember - mei
+		cuacaDiv.textContent = 'Cuaca dingin';
+		pesanDiv.textContent = 'Jaga tubuhmu agar tetap hangat!';
+		cuacaDiv.classList.remove('terik');
+		cuacaDiv.classList.remove('hujan');
+	}
+	
+}
+setCuacaDariBulan();
 
 
 let mulaiWaktu = Date.now();
@@ -105,29 +143,29 @@ const tanahTertanam = tanah.classList.contains('tertanam');
 const tanahSiapPanen = tanah.classList.contains('panen');
 
     if (tanahTertanam) {
-	if (tanahSiapPanen) {
-        	tanah.classList.remove('panen');
-        	tanah.textContent = "";
+    if (tanahSiapPanen) {
+            tanah.classList.remove('panen');
+            tanah.textContent = "";
         
-        	totalPoin += 3;
-        	totalUang += 7000;
-		perbaruiInfoPoinUang();
+            totalPoin += 3;
+            totalUang += 7000;
+        perbaruiInfoPoinUang();
 
-		tanah.classList.remove('tertanam');
-		localStorage.removeItem('timeLeft-' + tanah.dataset.id);
-	} 
+        tanah.classList.remove('tertanam');
+        localStorage.removeItem('timeLeft-' + tanah.dataset.id);
+    } 
     } else {
-	if (totalBibit > 0) {
-        	tanah.classList.add('tertanam');
-        	tambahTanaman(tanah);
-		totalBibit -= 1;
-		localStorage.setItem('totalBibit', totalBibit);
-		document.getElementById('bibit').textContent = totalBibit;
+    if (totalBibit > 0) {
+            tanah.classList.add('tertanam');
+            tambahTanaman(tanah);
+        totalBibit -= 1;
+        localStorage.setItem('totalBibit', totalBibit);
+        document.getElementById('bibit').textContent = totalBibit;
 
         tanah.classList.add('panen');
-	localStorage.setItem(tanah.dataset.id, 'panen');
+    localStorage.setItem(tanah.dataset.id, 'panen');
     } else {
-	alert("Bibit tanaman habis! belilah di toko");
+    alert("Bibit tanaman habis! belilah di toko");
   }
  }
 }
@@ -138,42 +176,42 @@ function tambahTanaman(tanah) {
     tanaman.classList.add('gambarTanamanMerah');
     tanah.appendChild(tanaman);
 
-	tanah.classList.add('panen');
+    tanah.classList.add('panen');
 }
 
 function hapusTanaman(tanah) {
     const tanaman = tanah.querySelector('.gambarTanamanMerah');
-	if (tanaman) {
-        	tanaman.remove();
-    	}
-	tanah.classList.remove("tertanam");
-	tanah.textContent = '';
+    if (tanaman) {
+            tanaman.remove();
+        }
+    tanah.classList.remove("tertanam");
+    tanah.textContent = '';
 
-	tanah.classList.add('tertanam');
+    tanah.classList.add('tertanam');
 }
 
 function perbaruiStatusTanamanDiLadang() {
-	const semuaTanah = document.querySelectorAll('.tanah');
-	
-	semuaTanah.forEach(tanah => {
-		const tanahId = tanah.dataset.id;
-		const statusTanaman = localStorage.getItem(tanahId);
-			
-		if (statusTanaman === 'panen') {
-			tanah.classList.add('panen');
-		} else if (statusTanaman === 'tertanam') {
-			tanah.classList.add('tertanam');
-		} else {
-			tanah.classList.remove('tertanam', 'panen');
-		}
-	});
+    const semuaTanah = document.querySelectorAll('.tanah');
+    
+    semuaTanah.forEach(tanah => {
+        const tanahId = tanah.dataset.id;
+        const statusTanaman = localStorage.getItem(tanahId);
+            
+        if (statusTanaman === 'panen') {
+            tanah.classList.add('panen');
+        } else if (statusTanaman === 'tertanam') {
+            tanah.classList.add('tertanam');
+        } else {
+            tanah.classList.remove('tertanam', 'panen');
+        }
+    });
 }
 perbaruiStatusTanamanDiLadang();
 
 
 
-let totalPoin = 0;
-let totalUang = parseInt(localStorage.getItem('totalUang')) || 200000;
+let totalPoin = parseInt(localStorage.getItem('totalPoin')) || 0;
+let totalUang = parseInt(localStorage.getItem('totalUang')) || 5000;
 console.log('Total Uang di localStorage:', totalUang);
 let totalBibit = parseInt(localStorage.getItem('totalBibit')) || 10;
 
@@ -182,11 +220,11 @@ document.getElementById('uang').textContent = "Rp" + totalUang;
 function perbaruiInfoPoinUang() {
     document.getElementById('poin').textContent = totalPoin;
     document.getElementById('uang').textContent = "Rp" + totalUang;
-	document.getElementById('bibit').textContent = totalBibit;
+    document.getElementById('bibit').textContent = totalBibit;
 
-	localStorage.setItem('totalPoin', totalPoin);
-	localStorage.setItem('totalUang', totalUang);
-	localStorage.setItem('totalBibit', totalBibit);
+    localStorage.setItem('totalPoin', totalPoin);
+    localStorage.setItem('totalUang', totalUang);
+    localStorage.setItem('totalBibit', totalBibit);
 }
 perbaruiInfoPoinUang();
 
@@ -198,51 +236,51 @@ let durasiLapar = getRandomDuration();
 let drasiHaus = getRandomDuration();
 
 function getRandomDuration() {
-	return Math.floor(Math.random() * (90 - 60 + 1)) + 60;
+    return Math.floor(Math.random() * (90 - 60 + 1)) + 60;
 }
 function perbaruiStatusHewan() {
-	const statusTeks = document.getElementById('statusHewan');
+    const statusTeks = document.getElementById('statusHewan');
 
-	if (lapar && haus) {
-		statusTeks.textContent = "Hewanmu lapar dan haus, segera beri makan dan minum!";
-	} else if (lapar) {
-		statusTeks.textContent = "Hewanmu lapar, segera beri makan!";
-	} else if (haus) {
-		statusTeks.textContent = "Hewanmu haus, segera beri minum!";
-	} else {
-		statusTeks.textContent = "Hewanmu dalam kondisi baik";
-	}
+    if (lapar && haus) {
+        statusTeks.textContent = "Hewanmu lapar dan haus, segera beri makan dan minum!";
+    } else if (lapar) {
+        statusTeks.textContent = "Hewanmu lapar, segera beri makan!";
+    } else if (haus) {
+        statusTeks.textContent = "Hewanmu haus, segera beri minum!";
+    } else {
+        statusTeks.textContent = "Hewanmu dalam kondisi baik";
+    }
 }
 function perbaruiKondisi() {
-	setTimeout(() => {
-		lapar = true;
-		perbaruiStatusHewan();
-	}, durasiLapar * 10000);
+    setTimeout(() => {
+        lapar = true;
+        perbaruiStatusHewan();
+    }, durasiLapar * 1000);
 
-	setTimeout(() => {
-		haus = true;
-		perbaruiStatusHewan();
-	}, durasiHaus * 10000);
+    setTimeout(() => {
+        haus = true;
+        perbaruiStatusHewan();
+    }, durasiHaus * 1000);
 }
 function beriMakan() {
-	if (lapar) {
-		lapar = false;
-		durasiLapar = getRandomDuration();
-		perbaruiStatusHewan();
-		alert("Hewanmu sekarang kenyang!");
-	} else {
-		alert("Hewanmu tidak lapar");
-	}
+    if (lapar) {
+        lapar = false;
+        durasiLapar = getRandomDuration();
+        perbaruiStatusHewan();
+        alert("Hewanmu sekarang kenyang!");
+    } else {
+        alert("Hewanmu tidak lapar");
+    }
 }
 function beriMinum() {
-	if (haus) {
-		haus = false;
-		durasiHaus = getRandomDuration();
-		perbaruiStatusHewan();
-		alert("Hewanmu sekarang kenyang!");
-	} else {
-		alert("Hewanmu tidak haus");
-	}
+    if (haus) {
+        haus = false;
+        durasiHaus = getRandomDuration();
+        perbaruiStatusHewan();
+        alert("Hewanmu sekarang kenyang!");
+    } else {
+        alert("Hewanmu tidak haus");
+    }
 }
 document.getElementById('beriMakan').addEventListener('click', beriMakan);
 document.getElementById('beriMinum').addEventListener('click', beriMinum);
@@ -250,34 +288,60 @@ perbaruiStatusHewan();
 
 
 
+let levelSumur = localStorage.getItem('levelSumur') ? parseInt(localStorage.getItem('levelSumur')) : 1;
+uangBiayaSumur = 10000;
+const levelSumurElement = document.getElementById("levelSumur");
+const levelUpSumurBtn = document.getElementById("levelUpSumur");
+
+function levelUpBangunSumur() {
+	if (totalUang >= uangBiayaSumur) {
+    		levelSumur++;
+    		totalUang -= uangBiayaSumur;
+    
+    		levelSumurElement.textContent = `${levelSumur}`;
+    
+    		localStorage.setItem('levelSumur', levelSumur);
+		localStorage.setItem('totalUang', totalUang);
+	} else {
+		alert("Uang tidak cukup untuk meningkatkan sumur!")
+	}
+}
+levelSumurElement.textContent = `${levelSumur}`;
+levelUpSumurBtn.addEventListener('click', levelUpBangunSumur);
+
+
+
 document.getElementById('totalUangSpan').textContent = totalUang;
 function beliBibitTanamanMerah() {
-	if (totalUang >= 2500) {
-		totalUang -= 2500;
-		totalBibit += 1;
-		localStorage.setItem('totalUang', totalUang);
-		localStorage.setItem('totalBibit', totalBibit);
-		document.getElementById('totalUangSpan').textContent = totalUang;
-		alert("Pembelian bibit biasa sah! sisa uang: " + totalUang);
-		perbaruiInfoPoinUang();
+    if (totalUang >= 2500) {
+        totalUang -= 2500;
+        totalBibit += 1;
+        localStorage.setItem('totalUang', totalUang);
+        localStorage.setItem('totalBibit', totalBibit);
+        document.getElementById('totalUangSpan').textContent = totalUang;
+        alert("Pembelian bibit biasa sah! sisa uang: " + totalUang);
+	
+perbaruiInfoPoinUang();
+    
 	} else {
-		alert("Uang tidak cukup untuk membeli bibit tanamanMerah"); 
+
+	        alert("Uang tidak cukup untuk membeli bibit tanamanMerah");
 	}
 }
 document.getElementById('beliBibitBtn').addEventListener('click', beliBibitTanamanMerah);
 
 function beliBibitTanamanMerahSuper() {
-	if (totalUang >= 10000) {
-		totalUang -= 10000;
-		totalBibit += 1;
-		localStorage.setItem('totalUang', totalUang);
-		localStorage.setItem('totalBibit', totalBibit);
-		document.getElementById('totalUangSpan').textContent = totalUang;
-		alert("Pembelian bibit super sah! sisa uang: " + totalUang);
-		perbaruiInfoPoinUang();
-	} else {
-		alert("Uang tidak cukup untuk membeli bibit tanamanMerahSuper"); 
-	}
+    if (totalUang >= 10000) {
+        totalUang -= 10000;
+        totalBibit += 1;
+        localStorage.setItem('totalUang', totalUang);
+        localStorage.setItem('totalBibit', totalBibit);
+        document.getElementById('totalUangSpan').textContent = totalUang;
+        alert("Pembelian bibit super sah! sisa uang: " + totalUang);
+        perbaruiInfoPoinUang();
+    } else {
+        alert("Uang tidak cukup untuk membeli bibit tanamanMerahSuper"); 
+    }
 }
 document.getElementById('beliBibitSuperBtn').addEventListener('click', beliBibitTanamanMerahSuper);
 });
