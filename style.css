@@ -9,7 +9,7 @@ html, body {
 }
 body {
     overflow: scroll;
-	overfow-x: hidden;
+	overflow-x: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
     transition: background-color 1s ease-in-out;
@@ -27,8 +27,6 @@ body::-webkit-scrollbar {
     display: none;
     height: 100vh;
     top: 50%;
-    left: 50%;
-    transform: translateX(-50%, -50%);
     font-size: 24px;
     color: black;
 }
@@ -325,6 +323,14 @@ body::-webkit-scrollbar {
         font-size: 16px;
 	margin-left: 10px;
     }
+	#levelUpSumur {
+        	padding: 5px 8px;
+        	margin-top: 5px;
+         	cursor: pointer;
+         	background-color: #755727;
+         	border: none;
+         	border-radius: 5px;
+	}
     
 
    
