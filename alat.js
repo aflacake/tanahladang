@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-console.log("Bahasa Browser" + navigator.language);
-
-
 // cek orientasi perangkat mengharuskan ke lanskap
 function cekOrientasi() {
     if (window.innerWidth > window.innerHeight) {
@@ -19,24 +16,6 @@ window.addEventListener('orientationchange', cekOrientasi);
 
 
 
-// loading
-let kunjunganTerakhir = parseInt(localStorage.getItem('kunjunganTerakhir')) || 0;
-waktuKunjunganSaatIni = new Date().getTime();
-
-if (waktuKunjunganSaatIni - kunjunganTerakhir > 86400000) {
-	localStorage.setItem('visited', 'false');
-	localStorage.setItem('kunjunganTerakhir', waktuKunjunganSaatIni);
-}
-if (!localStorage.getItem('visited')) {
-	localStorage.setItem('visited', 'true');
-}
-window.addEventListener('load', function() {
-	document.getElementById('loading-screen').style.display = 'none';
-	document.getElementById('main-konten').style.display = 'block';
-});
-
-
-
 // hari Senin, Selasa, Rabu dll
 const hariArray = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
 const hariHari = new Date();
@@ -46,9 +25,7 @@ document.getElementById("hariA").textContent = hariArray[hariHariIni];
 
 
 
-
 // fullscreen
-
 const fullscreenTombol = document.getElementById("fullScreenBtn");
 
 function sekarangmasukFullscreen() {
@@ -82,9 +59,6 @@ fullscreenTombol.addEventListener('click', function() {
 
 
 
-
-
-
 // reset data
 document.getElementById('resetGimBtn').addEventListener('click', function() {
     localStorage.clear();
@@ -106,34 +80,4 @@ playMusikBtn.addEventListener('click', function() {
 		audio.pause();
 		playMusikBtn.textContent = "Nyalakan musik";
 	}
-});
-
-
-
-// keamanan
-const observer = new MutationObserver((mutationsList) => {
-	for(const mutation of mutationsList) {
-		if (mutation.type === 'attributes') {
-			console.log('Atribut elemen berubah: ', mutation.target);
-		}
-	}
-});
-const config = { attributes: true, subtree: true };
-observer.observe(document.body, config);
-
-
-
-//status koneksi
-document.addEventListener("DOMContentLoaded", function() {
-function checkConnection() {
-    const tidakAdaKoneksiDiv = document.getElementById("tidakAdaKoneksi");
-    if (navigator.onLine) {
-        tidakAdaKoneksiDiv.style.display="none";
-    } else {
-        tidakAdaKoneksiDiv.style.display="block";
-    }
-}
-checkConnection();
-window.addEventListener('online', checkConnection);
-window.addEventListener('offline', checkConnection);
 });

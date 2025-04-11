@@ -1,13 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-//popKandangKambing
-var popKandangKambing = document.getElementById("popPenyimpanan");
-var btnRumahKambing = document.getElementById("rumahKambingBtn");
-
-btnRumahKambing.onclick = function() {
-    popKandangKambing.style.display = "block";
-}
-
-
 // popBeliBibit
 var popTokoBibit = document.getElementById("popTokoBibit");
 var btnBeliBibit = document.getElementById("tokoBibit");
@@ -39,9 +30,8 @@ var btnKisah =  document.getElementById("kisah");
 btnKisah.onclick = function() {
     popUpKisah.style.display = "block";
 }
-
 window.addEventListener('click', function(event) {
-    if (event.target == popKandangKambing || event.target == popTokoBibit || event.target == popUpPanduan || event.target == popUpData || event.target == popUpKisah) {
+    if (event.target == popTokoBibit || event.target == popUpPanduan || event.target == popUpData || event.target == popUpKisah) {
         event.target.style.display = "none";
     }
   });
@@ -54,7 +44,6 @@ function setBackgroundBerdasarkanWaktu() {
     const body = document.body;
     const lanskapMode = document.querySelector("pesanLanskap");
     const headerJud = document.querySelector("headerJud");
-    const cuaca = document.querySelector("cuaca")
     
     if (bgWaktuSaatIni >= 6 && bgWaktuSaatIni < 12) {
         body.style.backgroundColor = "#1EA3A8";
@@ -64,15 +53,12 @@ function setBackgroundBerdasarkanWaktu() {
         body.style.backgroundColor = "#B6200C";
     } else {
         body.style.backgroundColor = "#000000";
-    if (lanskapMode) {
-            lanskapMode.style.color = "white";
-    }
-    if (headerJud) {
-        headerJud.style.color = "white";
-    }
-    if (cuaca) {
-        cuaca.style.color = "white";
-    }
+	if (lanskapMode) {
+        	lanskapMode.style.color = "white";
+	}
+	if (headerJud) {
+		headerJud.style.color = "white";
+	}
     }
 }
 setBackgroundBerdasarkanWaktu();
@@ -82,34 +68,34 @@ setInterval(setBackgroundBerdasarkanWaktu, 3600000);
 
 // cuaca
 function mendapatkanBulanIni() {
-    const currentDate = new Date();
-    return currentDate.getMonth();
+	const currentDate = new Date();
+	return currentDate.getMonth();
 }
 function setCuacaDariBulan() {
-    const bulan = mendapatkanBulanIni();
-    const cuacaDiv = document.getElementById('cuaca');
-    const pesanDiv = document.getElementById('pesanCuaca');
-    
-    if (bulan >= 5 && bulan <= 8) {
-        // juni -  agustus
-        cuacaDiv.textContent = 'Cuaca panas';
-        pesanDiv.textContent = 'Nikmati cuaca yang cerah!';
-        cuacaDiv.classList.add('terik');
-        cuacaDiv.classList.remove('hujan');
-    } else if (bulan >=9 && bulan <= 11) {
-        // september - november
-        cuacaDiv.textContent = 'Cuaca hujan';
-        pesanDiv.textContent = 'Siapkan payung dan jas hujan, cuaca sedang hujan!';
-        cuacaDiv.classList.add('hujan');
-        cuacaDiv.classList.remove('terik');
-    } else {
-        // desember - mei
-        cuacaDiv.textContent = 'Cuaca dingin';
-        pesanDiv.textContent = 'Jaga tubuhmu agar tetap hangat!';
-        cuacaDiv.classList.remove('terik');
-        cuacaDiv.classList.remove('hujan');
-    }
-    
+	const bulan = mendapatkanBulanIni();
+	const cuacaDiv = document.getElementById('cuaca');
+	const pesanDiv = document.getElementById('pesanCuaca');
+	
+	if (bulan >= 5 && bulan <= 8) {
+		// juni -  agustus
+		cuacaDiv.textContent = 'Cuaca panas';
+		pesanDiv.textContent = 'Nikmati cuaca yang cerah!';
+		cuacaDiv.classList.add('terik');
+		cuacaDiv.classList.remove('hujan');
+	} else if (bulan >=9 && bulan <= 11) {
+		// september - november
+		cuacaDiv.textContent = 'Cuaca hujan';
+		pesanDiv.textContent = 'Siapkan payung dan jas hujan, cuaca sedang hujan!';
+		cuacaDiv.classList.add('hujan');
+		cuacaDiv.classList.remove('terik');
+	} else {
+		// desember - mei
+		cuacaDiv.textContent = 'Cuaca dingin';
+		pesanDiv.textContent = 'Jaga tubuhmu agar tetap hangat!';
+		cuacaDiv.classList.remove('terik');
+		cuacaDiv.classList.remove('hujan');
+	}
+	
 }
 setCuacaDariBulan();
 
@@ -244,35 +230,6 @@ perbaruiInfoPoinUang();
 
 
 
-//mbek!
-document.getElementById("anakKambing").addEventListener('click', function() {
-    const pesanKambing = document.getElementById("pesanMbek");
-    pesanKambing.style.display = 'block';
-
-    setTimeout(function() {
-        pesanKambing.style.display = 'none';
-    }, 5000); //5 detik
-})
-
-document.getElementById("kambingBetina").addEventListener('click', function() {
-    const pesanKambingBetina = document.getElementById("pesanMbekBetina");
-    pesanKambingBetina.style.display = 'block';
-
-    setTimeout(function() {
-        pesanKambingBetina.style.display = 'none';
-    }, 5000); //5 detik
-})
-
-document.getElementById("kambingJantan").addEventListener('click', function() {
-    const pesanKambingJantan = document.getElementById("pesanMbekJantan");
-    pesanKambingJantan.style.display = 'block';
-
-    setTimeout(function() {
-        pesanKambingJantan.style.display = 'none';
-    }, 5000); //5 detik
-})
-
-
 let lapar = false;
 let haus = false;
 let durasiLapar = getRandomDuration();
@@ -331,106 +288,23 @@ perbaruiStatusHewan();
 
 
 
-let levelRumahKambing = localStorage.getItem('levelRumahKambing') ? parseInt(localStorage.getItem('levelRumahKambing')) : 1;
-uangBiayaRumahKambing = 3000;
-const levelRumahKambingElement = document.getElementById("levelRumahKambing");
-const levelUpRumahKambingBtn = document.getElementById("rumahKambingUpBtn");
-const rumahKambingImgElement = document.getElementById("rumahKambing");
-
-function upgradeRumahKambingImg() {
-    if (levelRumahKambing >= 50) {
-        rumahKambingImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-rumahkambing.png';
-    } else {
-        rumahKambingImgElement.src = 'https://github.com/aflacake/tanahladang/raw/second/img/rumahkambing.png';
-    }
-}
-
-function levelUpBangunRmhKambing() {
-    if (totalUang >= uangBiayaRumahKambing) {
-            levelRumahKambing++;
-            totalUang -= uangBiayaRumahKambing;
-    
-            levelRumahKambingElement.textContent = `${levelRumahKambing}`;
-    
-            localStorage.setItem('levelRumahKambing', levelRumahKambing);
-            localStorage.setItem('totalUang', totalUang);
-
-        upgradeRumahKambingImg();
-    } else {
-        alert("Uang tidak cukup untuk meningkatkan rumah kambing!")
-    }
-}
-levelRumahKambingElement.textContent = `${levelRumahKambing}`;
-levelUpRumahKambingBtn.addEventListener('click', levelUpBangunRmhKambing);
-upgradeRumahKambingImg();
-
-
-
-let levelPohonRmhBurung = localStorage.getItem('levelPohonRmhBurung') ? parseInt(localStorage.getItem('levelPohonRmhBurung')) : 1;
-uangBiayaPohonBurung = 12000;
-const levelPohonBurungElement = document.getElementById("levelPohonBurung");
-const levelUpPohonBurungBtn = document.getElementById("pohonBurungUpBtn");
-const pohonBurungImgElement = document.getElementById("pohonBurung");
-
-function upgradePohonBurungImg() {
-    if (levelPohonRmhBurung >= 220) {
-        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohondanrumahburung.png';
-    } else if (levelPohonRmhBurung >= 110) {
-        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohonmati.png';
-    } else if (levelPohonRmhBurung >= 30) {
-        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohontumbuh.png';
-    }else {
-        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohonmati.png';
-    }
-}
-
-function levelUpBangunPohonBurung() {
-    if (totalUang >= uangBiayaPohonBurung) {
-            levelPohonRmhBurung++;
-            totalUang -= uangBiayaPohonBurung;
-    
-            levelPohonBurungElement.textContent = `${levelPohonRmhBurung}`;
-    
-            localStorage.setItem('levelPohonRmhBurung', levelPohonRmhBurung);
-            localStorage.setItem('totalUang', totalUang);
-
-        upgradePohonBurungImg();
-    } else {
-        alert("Uang tidak cukup untuk menghidupi pohon!")
-    }
-}
-levelPohonBurungElement.textContent = `${levelPohonRmhBurung}`;
-levelUpPohonBurungBtn.addEventListener('click', levelUpBangunPohonBurung);
-upgradePohonBurungImg();
-
-
-
 let levelSumur = localStorage.getItem('levelSumur') ? parseInt(localStorage.getItem('levelSumur')) : 1;
 uangBiayaSumur = 10000;
 const levelSumurElement = document.getElementById("levelSumur");
 const levelUpSumurBtn = document.getElementById("levelUpSumur");
-const sumurImgElement = document.getElementById("sumur");
-
-function upgradeSumurImg() {
-    if (levelSumur >= 50) {
-        sumurImgElement.src = '';
-    } else {
-        sumurImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/70fb96c92d1e706c91998087760ea1c8d6bbe15d/img/sumur.png';
-    }
-}
 
 function levelUpBangunSumur() {
-    if (totalUang >= uangBiayaSumur) {
-            levelSumur++;
-            totalUang -= uangBiayaSumur;
+	if (totalUang >= uangBiayaSumur) {
+    		levelSumur++;
+    		totalUang -= uangBiayaSumur;
     
-            levelSumurElement.textContent = `${levelSumur}`;
+    		levelSumurElement.textContent = `${levelSumur}`;
     
-            localStorage.setItem('levelSumur', levelSumur);
-        localStorage.setItem('totalUang', totalUang);
-    } else {
-        alert("Uang tidak cukup untuk meningkatkan sumur!")
-    }
+    		localStorage.setItem('levelSumur', levelSumur);
+		localStorage.setItem('totalUang', totalUang);
+	} else {
+		alert("Uang tidak cukup untuk meningkatkan sumur!")
+	}
 }
 levelSumurElement.textContent = `${levelSumur}`;
 levelUpSumurBtn.addEventListener('click', levelUpBangunSumur);
@@ -446,13 +320,13 @@ function beliBibitTanamanMerah() {
         localStorage.setItem('totalBibit', totalBibit);
         document.getElementById('totalUangSpan').textContent = totalUang;
         alert("Pembelian bibit biasa sah! sisa uang: " + totalUang);
-    
+	
 perbaruiInfoPoinUang();
     
-    } else {
+	} else {
 
-            alert("Uang tidak cukup untuk membeli bibit tanamanMerah");
-    }
+	        alert("Uang tidak cukup untuk membeli bibit tanamanMerah");
+	}
 }
 document.getElementById('beliBibitBtn').addEventListener('click', beliBibitTanamanMerah);
 
