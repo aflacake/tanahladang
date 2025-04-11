@@ -9,7 +9,7 @@ html, body {
 }
 body {
     overflow: scroll;
-    overflow-x: hidden;
+	overflow-x: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
     transition: background-color 1s ease-in-out;
@@ -23,63 +23,12 @@ body::-webkit-scrollbar {
 }
 
 
-
-/* tidak ada koneksi */
-#tidakAdaKoneksi {
-    display: none;
-    color: white;
-    background-color: salmon;
-    font-size: 16px;
-    text-align: center;
-}
-
-
-
 .pesanLanskap {
     display: none;
     height: 100vh;
     top: 50%;
     font-size: 24px;
     color: black;
-}
-
-
-
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fbbf24;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    font-size: 16px;
-}
-    #loading-text {
-        animation: blink 40s infinite;
-    }
-    @keyframes blink {
-        0% {
-            content: 'Menyiapkan lahan dan alat barang bagi petani.';
-        }
-        33% {
-            content: 'Menyiapkan lahan dan alat barang bagi petani.';
-        }
-        66% {
-            content: 'Menyiapkan lahan dan alat barang bagi petani..';
-        }
-        100% {
-            content: ' Menyiapkan lahan dan alat barang bagi petani...';
-        }
-    }
-
-
-#main-konten {
-    display: none;
 }
 .content {
     display: block;
@@ -94,8 +43,6 @@ body::-webkit-scrollbar {
 #fullScreenBtn, .kambingMemeliharaBtn, .kontenSumur, .menuGim {
     font-size: 16px;
 }
-
-
 
 .headerJud {
     padding: 20px 20px;
@@ -127,74 +74,75 @@ body::-webkit-scrollbar {
 
 
 #cuaca {
-    font-size: 48px;
-    margin-bottom: 20px;
+	font-size: 48px;
+	margin-bottom: 20px;
 }
 #pesanCuaca {
-    font-size: 16px;
+	font-size: 16px;
 }
-    .hujan {
-        color: #00f;
-        background-color: #a1c4fd;
-        padding: 20px;
-        border-radius: 10px;
-    }
-    .terik {
-        color: #ff4500;
-        background-color: #ffeb3b;
-        padding: 20px;
-        border-radius: 10px;
-    }
+	.hujan {
+		color: #00f;
+		background-color: #a1c4fd;
+		padding: 20px;
+		border-radius: 10px;
+	}
+	.terik {
+		color: #ff4500;
+		background-color: #ffeb3b;
+		padding: 20px;
+		border-radius: 10px;
+	}
 @keyframes rain {
-    0% { background-position: 0 0; }
-    100% { bacgroud-position: 100% 100%; }
+	0% { background-position: 0 0; }
+	100% { bacgroud-position: 100% 100%; }
 }
 
 
 
 .awanAwan {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+	position: relative;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
 }
-    .awan {
-        position: sticky;
-        width: 300px;
-        height: 75px;
-        background-color: none;
-        shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
-        animation: moveAwan 30s linear infinite; 
-    }
-        .awan:nth-child(1) {
-            top: 20px;
-            left: -300px;
-            animation-duration: 25s;
-            animation-delay: 0s;
-        }
-        .awan:nth-child(2) {
-            top: 90px;
-            left: -350px;
-            animation-duration: 35s;
-            animation-delay: 5s;
-        }
-        .awan:nth-child(3) {
-            top: 50px;
-            left: -400px;
-            animation-duration: 20s;
-            animation-delay: 10s;
-        }
-    @keyframes moveAwan {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(100vw);
-        }
-    }
+	.awan {
+		position: sticky;
+		width: 300px;
+		height: 75px;
+		background-color: white;
+		border-radius: 50%;
+		box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
+		animation: moveAwan 30s linear infinite; 
+	}
+		.awan:nth-child(1) {
+			top: 20px;
+			left: -300px;
+			animation-duration: 25s;
+			animation-delay: 0s;
+		}
+		.awan:nth-child(2) {
+			top: 90px;
+			left: -350px;
+			animation-duration: 35s;
+			animation-delay: 5s;
+		}
+		.awan:nth-child(3) {
+			top: 50px;
+			left: -400px;
+			animation-duration: 20s;
+			animation-delay: 10s;
+		}
+	@keyframes moveAwan {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(100vw);
+		}
+	}
 
 
 /* 16px */
@@ -206,47 +154,12 @@ body::-webkit-scrollbar {
 }
 
 
-
 .kotaKota {
-    height: 250px;
-    display: flex;
-    fex-drection: row;
+    height: 100px;
     background-color: #0B932D;
     border-radius: 15px 15px 0 0;
     border-top: 10px solid #A46D16;
 }
-    #kotaRumahKambing {
-        width: 20%;
-        display: block;
-    }
-    .popPenyimpanan {
-         width: 100%;
-         height: 100%;
-         display: none;
-         position: fixed;
-         top: 0;
-         left: 0;
-         background-color: rgba(0, 0, 0, 0.4); /* transparan */
-         z-index: 15;
-     }
-	
-     .kontenPenyimpanan {
-         width: 100%;
-         max-width: 400px;
-         margin: 0;
-         padding: 5px;
-         font-size: 16px;
-         background-color: #755727;
-     }
-     #rumahKambingBtn, #rumahKambingUpBtn, #kotaRumahKambing p, #pohonBurungUpBtn, #kotaPohonBurung p {
-         margin-left: 5px;
-     }
-
-    #kotaRumahKambing {
-        width: 20%;
-        display: block;
-    }
-
 
 
 .tanahLadang {
@@ -327,104 +240,64 @@ body::-webkit-scrollbar {
 .ternakKambing {
     display: flex;
     flex-direction: row;
-    height: 350px;
+    height: 400px;
         padding: 4px 5px;
         background-color: #0B932D;
         border-radius: 0 0 15px 15px;
         border-bottom: 10px solid #A46D16;
 }
     #anakKambing {
-        display: inline-block;
-        position: sticky;
-        left: 0;
-        padding-left: 10px;
-        animation: gerakAnakKambing 27s linear infinite;
+		position: sticky;
+        	left: 0;
+            	padding-left: 10px;
+        	animation: gerakAnakKambing 27s linear infinite;
         }
         @keyframes gerakAnakKambing {
             0% {
-                transform: translateX(0) scaleX(-1);
-                }
-            1% {
-                transform: translateX(5%) scaleX(-1);
-            }
-            49% {
-                transform: translateX(80%) scaleX(-1);
+                left: 0;
             }
             50% {
-                transform: translateX(100%) scaleX(1);
-            }
-            99% {
-                transform: translateX(5%) scaleX(1);
+                left: 20%;
             }
             100% {
-                transform: translateX(0) scaleX(-1);
+                left: 0;
             }
         }
-        #pesanMbek, #pesanMbekBetina, #pesanMbekJantan {
-            display: none;
-        width: 150px;
-            position: relative;
-            top: -16%;
-            left: 0;
-            color: black;
-            font-size: 16px;
-        }
-        
         #kambingBetina {
-            display: inline-block;
-            position: sticky;
-            right: 0;
-            padding-left: 30px;
-            animation: gerakKambingBetina 40s linear infinite;
+        	position: sticky;
+        	right: 0;
+        	padding-left: 30px;
+        	animation: gerakKambingBetina 40s linear infinite;
         }
         @keyframes gerakKambingBetina {
             0% {
-                transform: translateX(0) scaleX(-1);
-                }
-            1% {
-                transform: translateX(5%) scaleX(-1);
-            }
-            49% {
-                transform: translateX(80%) scaleX(-1);
+                right: 0;
             }
             50% {
-                transform: translateX(100%) scaleX(1);
-            }
-            99% {
-                transform: translateX(5%) scaleX(1);
+                right: 100%;
             }
             100% {
-                transform: translateX(0) scaleX(-1);
+                right: 0;
             }
         }
     #kambingJantan {
-            display: inline-block;
-            position: sticky;
-            right: 0;
-                padding-left: 20px;
-            animation: gerakKambingJantan 30s linear infinite;
+        	position: sticky;
+        	right: 0;
+            	padding-left: 20px;
+        	animation: gerakKambingJantan 30s linear infinite;
         }
         @keyframes gerakKambingJantan {
             0% {
-                transform: translateX(0) scaleX(-1);
-                }
-            1% {
-                transform: translateX(5%) scaleX(-1);
-            }
-            49% {
-                transform: translateX(80%) scaleX(-1);
+                right: 0;
             }
             50% {
-                transform: translateX(100%) scaleX(1);
-            }
-            99% {
-                transform: translateX(5%) scaleX(1);
+                right: 100%;
             }
             100% {
-                transform: translateX(0) scaleX(-1);
+                right: 0;
             }
         }
-.btnFeed {
+.btnFeed, #levelUpSumur {
         padding: 5px 8px;
         margin-top: 5px;
          cursor: pointer;
@@ -432,10 +305,6 @@ body::-webkit-scrollbar {
          border: none;
          border-radius: 5px;
 }
-    .btnFeed:active {
-        transition-duration: 4s ease;
-          transform: scale(.70);
-    }
 .kumpulanKambing {
     width: 50%;
 }
@@ -452,20 +321,16 @@ body::-webkit-scrollbar {
 }
     .kontenSumur {
         font-size: 16px;
-    margin-left: 10px;
+	margin-left: 10px;
     }
-    #rumahKambingBtn, #rumahKambingUpBtn, #pohonBurungUpBtn, #levelUpSumur {
-            padding: 5px 8px;
-            margin-top: 5px;
-             cursor: pointer;
-             background-color: #755727;
-             border: none;
-             border-radius: 5px;
-    }
-    #rumahKambingBtn:active, #rumahKambingUpBtn:active, #levelUpSumur:active {
-             transition-duration: 4s ease;
-              transform: scale(.70);
-         }
+	#levelUpSumur {
+        	padding: 5px 8px;
+        	margin-top: 5px;
+         	cursor: pointer;
+         	background-color: #755727;
+         	border: none;
+         	border-radius: 5px;
+	}
     
 
    
@@ -476,17 +341,13 @@ body::-webkit-scrollbar {
      background-color: #755727;
      border: 4px solid #A46D16;
  }
-#tokoBibit, #beliBibitBtn, #beliBibitSuperBtn, #panduanBermain, #dataMu, #resetGimBtn, #kisah, #playMusikBtn {
+ #tokoBibit, #beliBibitBtn, #beliBibitSuperBtn, #panduanBermain, #dataMu, #resetGimBtn, #kisah, #playMusikBtn {
      padding: 5px 8px;
      cursor: pointer;
      background-color: #0B932D;
      border: none;
      border-radius: 5px;
  }
-     #tokoBibit:active, #beliBibitBtn:active, #beliBibitSuperBtn:active, #panduanBermain:active, #dataMu:active, #resetGimBtn:active, #kisah:active, #playMusikBtn:active {
-         transition-duration: 4s ease;
-          transform: scale(.70);
-     }
      /* popUp */
     /* transaksi */
      .popTokoBibit {
@@ -571,7 +432,7 @@ body::-webkit-scrollbar {
      /* close */
 
 audio {
-    display: none;
+	display: none;
 }
 
 
@@ -657,9 +518,9 @@ audio {
         color: black;
         display: block;
     }
-    #pesanLanskapKonten {
+	#pesanLanskapKonten {
 
-    }
+	}
     .content {
         display: none;
     }
