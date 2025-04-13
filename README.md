@@ -1,3 +1,4 @@
+<p align="right">Bahasa Indonesia</p>
 <img src="https://raw.githubusercontent.com/aflacake/tanahladang/main/img/logotanahladang.png" width="200px" height="200px" alt="logo"/>
 
 # Tanah Ladang
