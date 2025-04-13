@@ -413,7 +413,7 @@ const sumurImgElement = document.getElementById("sumur");
 
 function upgradeSumurImg() {
     if (levelSumur >= 50) {
-        sumurImgElement.src = '';
+        sumurImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-sumurlvl50.png';
     } else {
         sumurImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/70fb96c92d1e706c91998087760ea1c8d6bbe15d/img/sumur.png';
     }
