@@ -338,7 +338,9 @@ const levelUpRumahKambingBtn = document.getElementById("rumahKambingUpBtn");
 const rumahKambingImgElement = document.getElementById("rumahKambing");
 
 function upgradeRumahKambingImg() {
-    if (levelRumahKambing >= 50) {
+    if (levelRumahKambing >= 100) {
+        rumahKambingImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-rumahkambinglvl100.png';
+    } else if(levelRumahKambing >= 50) {
         rumahKambingImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-rumahkambing.png';
     } else {
         rumahKambingImgElement.src = 'https://github.com/aflacake/tanahladang/raw/second/img/rumahkambing.png';
