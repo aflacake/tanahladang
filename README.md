@@ -17,8 +17,7 @@ Berladang dengan berpondasikan menanam disetiap grid lantai tanah, konsep petani
 
 # Instalasi
 Aplikasi: aplikasi-web
-> Tidak membutuhkan instalasi, semua disiapkan di deploy halaman siap dimuat dan main.
-
+> Instalasi paket tersedia
 Online/offline: online
 
 # Berkontribusi
