@@ -219,6 +219,12 @@ body::-webkit-scrollbar {
         width: 20%;
         display: block;
     }
+        #rumahKambing, #pohonBurung, #sumur {
+            transition: transform 0.3s ease;
+        }
+        #rumahKambing:hover, #pohonBurung:hover, #sumur:hover {
+            transform: scale(1.2);
+        }
     .popPenyimpanan {
          width: 100%;
          height: 100%;
@@ -241,12 +247,6 @@ body::-webkit-scrollbar {
      #rumahKambingBtn, #rumahKambingUpBtn, #kotaRumahKambing p, #pohonBurungUpBtn, #kotaPohonBurung p {
          margin-left: 5px;
      }
-
-    #kotaRumahKambing {
-        width: 20%;
-        display: block;
-    }
-
 
 
 .tanahLadang {
@@ -608,7 +608,7 @@ audio {
     height: 40px;
     position: relative;
     margin-top: -100px;
-    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-image: url('https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tanamanbuahmerah.png');
     background-size: cover;
     background-position: center;
 }
@@ -618,7 +618,7 @@ audio {
     position: relative;
     margin-top: -20px;
     margin-left: 70px;
-    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-image: url('https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tanamanbuahmerah.png');
     background-size: cover;
     background-position: center;
 }
@@ -628,7 +628,7 @@ audio {
     position: relative;
     margin-top: -120px;
     margin-left: 70px;
-    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-image: url('https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tanamanbuahmerah.png');
     background-size: cover;
     background-position: center;
 }
@@ -639,7 +639,7 @@ audio {
     position: relative;
     margin-top: -110px;
     margin-left: 70px;
-    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-image: url('https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tanamanbuahmerah.png');
     background-size: cover;
     background-position: center;
 }
