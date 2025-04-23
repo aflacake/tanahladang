@@ -215,10 +215,17 @@ body::-webkit-scrollbar {
     border-radius: 15px 15px 0 0;
     border-top: 10px solid #A46D16;
 }
-    #kotaRumahKambing {
+    #kotaRumahKambing, #kotaPohonBurung {
         width: 20%;
         display: block;
+        padding: 10px;
     }
+        #rumahKambing, #pohonBurung, #sumur {
+            transition: transform 0.3s ease;
+        }
+        #rumahKambing:hover, #pohonBurung:hover, #sumur:hover {
+            transform: scale(1.2);
+        }
     .popPenyimpanan {
          width: 100%;
          height: 100%;
@@ -239,14 +246,8 @@ body::-webkit-scrollbar {
          background-color: #755727;
      }
      #rumahKambingBtn, #rumahKambingUpBtn, #kotaRumahKambing p, #pohonBurungUpBtn, #kotaPohonBurung p {
-         margin-left: 5px;
+         margin-left: 10px;
      }
-
-    #kotaRumahKambing {
-        width: 20%;
-        display: block;
-    }
-
 
 
 .tanahLadang {
@@ -328,10 +329,10 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     height: 350px;
-        padding: 4px 5px;
-        background-color: #0B932D;
-        border-radius: 0 0 15px 15px;
-        border-bottom: 10px solid #A46D16;
+    padding: 4px 5px;
+    background-color: #0B932D;
+    border-radius: 0 0 15px 15px;
+    border-bottom: 10px solid #A46D16;
 }
     #anakKambing {
         display: inline-block;
@@ -362,7 +363,7 @@ body::-webkit-scrollbar {
         }
         #pesanMbek, #pesanMbekBetina, #pesanMbekJantan {
             display: none;
-        width: 150px;
+            width: 150px;
             position: relative;
             top: -16%;
             left: 0;
@@ -476,14 +477,14 @@ body::-webkit-scrollbar {
      background-color: #755727;
      border: 4px solid #A46D16;
  }
-#tokoBibit, #beliBibitBtn, #beliBibitSuperBtn, #panduanBermain, #dataMu, #resetGimBtn, #kisah, #playMusikBtn {
+#tokoBibit, #beliBibitBtn, #beliBibitSuperBtn, #panduanBermain, #index, #dataMu, #resetGimBtn, #kisah, #playMusikBtn {
      padding: 5px 8px;
      cursor: pointer;
      background-color: #0B932D;
      border: none;
      border-radius: 5px;
  }
-     #tokoBibit:active, #beliBibitBtn:active, #beliBibitSuperBtn:active, #panduanBermain:active, #dataMu:active, #resetGimBtn:active, #kisah:active, #playMusikBtn:active {
+     #tokoBibit:active, #beliBibitBtn:active, #beliBibitSuperBtn:active, #panduanBermain:active, #index:active, #dataMu:active, #resetGimBtn:active, #kisah:active, #playMusikBtn:active {
          transition-duration: 4s ease;
           transform: scale(.70);
      }
@@ -608,7 +609,7 @@ audio {
     height: 40px;
     position: relative;
     margin-top: -100px;
-    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-image: url('https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tanamanbuahmerah.png');
     background-size: cover;
     background-position: center;
 }
@@ -618,7 +619,7 @@ audio {
     position: relative;
     margin-top: -20px;
     margin-left: 70px;
-    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-image: url('https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tanamanbuahmerah.png');
     background-size: cover;
     background-position: center;
 }
@@ -628,7 +629,7 @@ audio {
     position: relative;
     margin-top: -120px;
     margin-left: 70px;
-    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-image: url('https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tanamanbuahmerah.png');
     background-size: cover;
     background-position: center;
 }
@@ -639,7 +640,7 @@ audio {
     position: relative;
     margin-top: -110px;
     margin-left: 70px;
-    background-image: url('https://i.imghippo.com/files/PYVt9190SXs.png');
+    background-image: url('https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tanamanbuahmerah.png');
     background-size: cover;
     background-position: center;
 }

@@ -1,0 +1,4 @@
+"electron": "electron.js",
+"scripts": {
+	"start": "electron ."
+}

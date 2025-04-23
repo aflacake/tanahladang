@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100vh;
+    font-family: times new roman;
+    overflow: hidden;
+}
+body {
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: #1EA3A8;
+    transition: background-color 1s ease-in-out;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
