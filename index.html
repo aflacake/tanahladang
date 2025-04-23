@@ -99,13 +99,13 @@
     <!-- peternakan -->
     <div class="ternakKambing" id="ternakKambing">
     <div class="kumpulanKambing">
-        <a id="anakKambing"><img src="https://github.com/aflacake/tanahladang/raw/second/img/kambingkrem.png" width="70px" height="65px" alt="Anak Kambing" /></a>
+        <a id="anakKambing"><img src="https://github.com/aflacake/tanahladang/raw/second/img/kambingkrem.png" width="70px" height="65px" alt="Anak Kambing" onclick="putarSuaraKamAnakKambing()" /></a>
         <div id="pesanMbek">Mbek!</div>
         
-        <a id="kambingBetina"><img src="https://github.com/aflacake/tanahladang/raw/second/img/kambingkrem.png" width="110px" height="100px" alt="Kambing betina" /></a>
+        <a id="kambingBetina"><img src="https://github.com/aflacake/tanahladang/raw/second/img/kambingkrem.png" width="110px" height="100px" alt="Kambing betina" onclick="putarSuaraKambingBetina()" /></a>
         <div id="pesanMbekBetina">Mbek! mbek!</div>
 	
-	<a id="kambingJantan"><img src="https://github.com/aflacake/tanahladang/raw/second/img/kambingkrem.png" width="120px" height="110px" alt="Kambing jantan" /></a>
+	<a id="kambingJantan"><img src="https://github.com/aflacake/tanahladang/raw/second/img/kambingkrem.png" width="120px" height="110px" alt="Kambing jantan" onclick="putarSuaraKambingJantan()" /></a>
         <div id="pesanMbekJantan">Mbek! mbek! mbek!</div>
         
             <div class="menuKambing">
@@ -117,8 +117,15 @@
                 <button class="btnFeed" id="beriMakan">Beri Makan</button>
                 <button class="btnFeed" id="beriMinum">Beri Minum</button>
                 </div>
-            </div>
-          </div>
+
+            <audio id="suaraAnakKambing">
+                <source src="https://raw.githubusercontent.com/aflacake/tanahladang/second/mp3/baby-goat-bleating-87916.mp3" type="audio/mpeg" />
+            </audio>
+            <audio id="suaraKambingJantanDanBetina">
+                <source src="https://raw.githubusercontent.com/aflacake/tanahladang/second/mp3/happy-goat-6463.mp3" type="audio/mpeg" />
+            </audio>
+      </div>
+      </div>
     
     <div class="kontenBangunan2">
         <div class="kontenSumur">
