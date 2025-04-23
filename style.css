@@ -334,6 +334,9 @@ body::-webkit-scrollbar {
     border-radius: 0 0 15px 15px;
     border-bottom: 10px solid #A46D16;
 }
+#suaraAnakKambing, #suaraKambingJantanDanBetina {
+    display: none;
+}
     #anakKambing {
         display: inline-block;
         position: sticky;
