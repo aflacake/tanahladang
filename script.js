@@ -253,7 +253,7 @@ perbaruiInfoPoinUang();
 //mbek!
 document.getElementById("anakKambing").addEventListener('click', function() {
     const pesanKambing = document.getElementById("pesanMbek");
-    pesanKambing.style.display = 'block';
+    pesanKambing.style.display = 'inline-block';
 
     setTimeout(function() {
         pesanKambing.style.display = 'none';
@@ -262,7 +262,7 @@ document.getElementById("anakKambing").addEventListener('click', function() {
 
 document.getElementById("kambingBetina").addEventListener('click', function() {
     const pesanKambingBetina = document.getElementById("pesanMbekBetina");
-    pesanKambingBetina.style.display = 'block';
+    pesanKambingBetina.style.display = 'inline-block';
 
     setTimeout(function() {
         pesanKambingBetina.style.display = 'none';
@@ -271,12 +271,46 @@ document.getElementById("kambingBetina").addEventListener('click', function() {
 
 document.getElementById("kambingJantan").addEventListener('click', function() {
     const pesanKambingJantan = document.getElementById("pesanMbekJantan");
-    pesanKambingJantan.style.display = 'block';
+    pesanKambingJantan.style.display = 'inline-block';
 
     setTimeout(function() {
         pesanKambingJantan.style.display = 'none';
     }, 5000); //5 detik
 })
+
+
+function putarSuaraKamAnakKambing() {
+    const audio = document.getElementById("suaraAnakKambing");
+    console.log(audio);
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+    } else {
+        console.log("Audio anak kambing tidak ditemukan")
+    }
+}
+
+function putarSuaraKambingBetina() {
+    const audio = document.getElementById("suaraKambingJantanDanBetina");
+    console.log(audio);
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+    } else {
+        console.log("Audio kambing betina tidak ditemukan")
+    }
+}
+
+function putarSuaraKambingJantan() {
+    const audio = document.getElementById("suaraKambingJantanDanBetina");
+    console.log(audio);
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+    } else {
+        console.log("Audio kambing jantan tidak ditemukan")
+    }
+}
 
 
 let lapar = false;
@@ -382,14 +416,14 @@ const pohonBurungImgElement = document.getElementById("pohonBurung");
 
 function upgradePohonBurungImg() {
     if (levelPohonRmhBurung >= 330) {
-      pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohondanrumahburunglvl330.png';
+        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohondanrumahburunglvl330.png';
     } else if (levelPohonRmhBurung >= 220) {
         pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohondanrumahburung.png';
     } else if (levelPohonRmhBurung >= 110) {
-        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohonmati.png';
+        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-pohon.png';
     } else if (levelPohonRmhBurung >= 30) {
         pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohontumbuh.png';
-    }else {
+    } else {
         pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohonmati.png';
     }
 }
