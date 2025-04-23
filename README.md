@@ -12,7 +12,7 @@ Berladang dengan berpondasikan menanam disetiap grid lantai tanah, konsep petani
 - [X] Memelihara kambing, peristirahatan kandang telah diukur dengan baik tepatnya dibawah lahan yang subur.
 - [X] Sumber daya lainnya (manajemen sederhana seperti membangun pertokoan dan pengguna diharapkan interaktif)
 - [X] Membuat beli bibit tanamanMerah di toko (nilai Rp2.500)
-- [ ] Index dex Tanah Ladang untuk panduan pengguna
+- [X] Index dex Tanah Ladang untuk panduan pengguna
 
 # Instalasi
 Aplikasi: aplikasi-web
