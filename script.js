@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+document.getElementById("index").addEventListener("click", function() {
+    window.location.href = "https://aflacake.github.io/tanahladang/tanahladangdex/dexindex.html";
+});
+
+
+
 //popKandangKambing
 var popKandangKambing = document.getElementById("popPenyimpanan");
 var btnRumahKambing = document.getElementById("rumahKambingBtn");
@@ -341,7 +347,7 @@ function upgradeRumahKambingImg() {
     if (levelRumahKambing >= 100) {
         rumahKambingImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-rumahkambinglvl100.png';
     } else if(levelRumahKambing >= 50) {
-        rumahKambingImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-rumahkambing.png';
+        rumahKambingImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-rumahkambinglvl50.png';
     } else {
         rumahKambingImgElement.src = 'https://github.com/aflacake/tanahladang/raw/second/img/rumahkambing.png';
     }
@@ -375,7 +381,9 @@ const levelUpPohonBurungBtn = document.getElementById("pohonBurungUpBtn");
 const pohonBurungImgElement = document.getElementById("pohonBurung");
 
 function upgradePohonBurungImg() {
-    if (levelPohonRmhBurung >= 220) {
+    if (levelPohonRmhBurung >= 330) {
+      pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohondanrumahburunglvl330.png';
+    } else if (levelPohonRmhBurung >= 220) {
         pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohondanrumahburung.png';
     } else if (levelPohonRmhBurung >= 110) {
         pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohonmati.png';
