@@ -225,19 +225,21 @@ body::-webkit-scrollbar {
             transform: scale(1.2);
         }
     .popPenyimpanan {
-         width: 100%;
-         height: 100%;
-         display: none;
-         position: fixed;
-         top: 0;
-         left: 0;
-         background-color: rgba(0, 0, 0, 0.4); /* transparan */
-         z-index: 15;
+        display: none;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* transparan */
+        z-index: 15;
      }
 	
      .kontenPenyimpanan {
          width: 100%;
-         max-width: 500px;
+         max-width: 600px;
          margin: 0;
          padding: 5px;
          font-size: 16px;
@@ -492,18 +494,20 @@ body::-webkit-scrollbar {
      /* popUp */
     /* transaksi */
      .popTokoBibit {
-         width: 100%;
-         height: 100%;
-         display: none;
-         position: fixed;
-         top: 0;
-         left: 0;
-         background-color: rgba(0, 0, 0, 0.4); /* transparan */
-         z-index: 15;
+        display: none;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* transparan */
+        z-index: 15;
      }
      .kontenTokoBibit {
          width: 100%;
-         max-width: 500px;
+         max-width: 600px;
          margin: 0;
          padding: 20px;
          font-size: 16px;
@@ -512,18 +516,20 @@ body::-webkit-scrollbar {
 
      /* panduan */
      .popPanduanBermain {
-         width: 100%;
-         height: 100%;
-         display: none;
-         position: fixed;
-         top: 0;
-         left: 0;
-         background-color: rgba(0, 0, 0, 0.4); /* transparan */
-         z-index: 15;
+        display: none;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* transparan */
+        z-index: 15;
      }
      .kontenPanduan {
          width: 100%;
-         max-width: 500px;
+         max-width: 600px;
          margin: 0;
          padding: 20px;
          font-size: 16px;
@@ -532,18 +538,20 @@ body::-webkit-scrollbar {
      
      /* data */
      .popDataMu {
-         width: 100%;
-         height: 100%;
-         display: none;
-         position: fixed;
-         top: 0;
-         left: 0;
-         background-color: rgba(0, 0, 0, 0.4); /* transparan */
-         z-index: 15;
+        display: none;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* transparan */
+        z-index: 15;
      }
      .kontenData {
          width: 100%;
-         max-width: 500px;
+         max-width: 600px;
          margin: 0;
          padding: 20px;
          font-size: 16px;
@@ -552,18 +560,20 @@ body::-webkit-scrollbar {
      
      /* kisah */
      .popKisah {
-         width: 100%;
-         height: 100%;
-         display: none;
-         position: fixed;
-         top: 0;
-         left: 0;
-         background-color: rgba(0, 0, 0, 0.4); /* transparan */
-         z-index: 15;
+        display: none;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* transparan */
+        z-index: 15;
      }
      .kontenKisah {
          width: 100%;
-         max-width: 500px;
+         max-width: 650px;
          margin: 0;
          padding: 20px;
          font-size: 16px;
