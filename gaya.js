@@ -8,11 +8,11 @@ pesanLanskap.style.fontSize = '16px';
 
 // Rumah kambing, pohon, dan sumur
 const kotaRumahKambing = document.getElementById("kotaRumahKambing");
-kotaRumahKambing.style.zIndex = '9999';
+kotaRumahKambing.style.zIndex = '15';
 
 const kotaPohonBurung = document.getElementById("kotaPohonBurung");
-kotaPohonBurung.style.zIndex = '9999';
+kotaPohonBurung.style.zIndex = '15';
 
 const kontenSumur = document.getElementById("kontenSumur");
-kontenSumur.style.zIndex = '9999';
+kontenSumur.style.zIndex = '15';
 });
