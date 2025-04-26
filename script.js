@@ -10,7 +10,7 @@ var popKandangKambing = document.getElementById("popPenyimpanan");
 var btnRumahKambing = document.getElementById("rumahKambingBtn");
 
 btnRumahKambing.onclick = function() {
-    popKandangKambing.style.display = "block";
+    popKandangKambing.style.display = "flex";
 }
 
 
@@ -19,7 +19,7 @@ var popTokoBibit = document.getElementById("popTokoBibit");
 var btnBeliBibit = document.getElementById("tokoBibit");
 
 btnBeliBibit.onclick = function() {
-    popTokoBibit.style.display = "block";
+    popTokoBibit.style.display = "flex";
 }
 
 // popPanduan
@@ -27,7 +27,7 @@ var popUpPanduan = document.getElementById("popPanduanBermain");
 var btnPanduan = document.getElementById("panduanBermain");
 
 btnPanduan.onclick = function() {
-    popUpPanduan.style.display = "block";
+    popUpPanduan.style.display = "flex";
 }
 
 // popDataMu
@@ -35,7 +35,7 @@ var popUpData = document.getElementById("popDataMu");
 var btnData = document.getElementById("dataMu");
 
 btnData.onclick = function() {
-    popUpData.style.display = "block";
+    popUpData.style.display = "flex";
 }
 
 // popKisah
@@ -43,7 +43,7 @@ var popUpKisah = document.getElementById("popKisah");
 var btnKisah =  document.getElementById("kisah");
 
 btnKisah.onclick = function() {
-    popUpKisah.style.display = "block";
+    popUpKisah.style.display = "flex";
 }
 
 window.addEventListener('click', function(event) {
