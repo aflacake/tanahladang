@@ -38,9 +38,6 @@ body::-webkit-scrollbar {
 .pesanLanskap {
     display: none;
     height: 100vh;
-    top: 50%;
-    font-size: 24px;
-    color: black;
 }
 
 
@@ -127,7 +124,8 @@ body::-webkit-scrollbar {
 
 
 #cuaca {
-    font-size: 48px;
+    padding: 20px;
+    font-size: 36px;
     margin-bottom: 20px;
 }
 #pesanCuaca {
@@ -208,7 +206,7 @@ body::-webkit-scrollbar {
 
 
 .kotaKota {
-    height: 250px;
+    height: 300px;
     display: flex;
     fex-drection: row;
     background-color: #0B932D;
