@@ -503,7 +503,7 @@ body::-webkit-scrollbar {
      }
      .kontenTokoBibit {
          width: 100%;
-         max-width: 400px;
+         max-width: 500px;
          margin: 0;
          padding: 20px;
          font-size: 16px;
@@ -523,7 +523,7 @@ body::-webkit-scrollbar {
      }
      .kontenPanduan {
          width: 100%;
-         max-width: 400px;
+         max-width: 500px;
          margin: 0;
          padding: 20px;
          font-size: 16px;
@@ -543,7 +543,7 @@ body::-webkit-scrollbar {
      }
      .kontenData {
          width: 100%;
-         max-width: 400px;
+         max-width: 500px;
          margin: 0;
          padding: 20px;
          font-size: 16px;
@@ -563,7 +563,7 @@ body::-webkit-scrollbar {
      }
      .kontenKisah {
          width: 100%;
-         max-width: 400px;
+         max-width: 500px;
          margin: 0;
          padding: 20px;
          font-size: 16px;
