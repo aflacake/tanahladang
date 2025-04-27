@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ladang Ladang - Rumah</title>
+        <link rel="icon" type="image/png" href="https://github.com/aflacake/tanahladang/raw/second/img/logotanahladang.png" alt="logo Tanah Ladang">        
+
+        <link rel="stylesheet" href="rumahstyle.css">
+    </head>
+    <body>
+    
+    <div class="kontenTeks">
+        <h1>Gim Tanah Ladang</h1>
+        <p>Permainan ladang penuh cerita seorang anak perempuan simfoni kelas 3 berbakat biologi umum menemukan bibit langka disebut <code>tanamanMerah</code> dan membuka bisnis ladangnya hasil dari hadiah dari kedua orang tuanya. Ia memulai langkah untuk menanam pertama kalinya di desa terpencil bernama <code>ladangBenih</code> tinggal di pondok ladang hijau panorama.</p>
+        
+        <p>Bisakah Anda memulai memainkan ceritanya seperti kisah saat jurnal menanam, reparasi bangunan, dan berdagang di <code>ladangBenih</code>?</p>
+    </div>
+        
+        <button id="mulaiBtn">Mulai Gim!</button>
+        
+        
+        <div class="gambarKonten">
+            <img src="https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohondanrumahburunglvl330.png" alt="Pohon dan Burung" />
+        
+            <img src="https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-rumahkambinglvl100.png" alt="Rumah Kambing" />
+        </div>
+        
+        <script src="rumahscript.js"></script>
+    </body>
+</html>
