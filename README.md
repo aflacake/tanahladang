@@ -6,6 +6,7 @@ Berladang dengan berpondasikan menanam disetiap grid lantai tanah, konsep petani
 
 ## Mendukung di
 - [X] Browser Chrome, Firefox, dan Edge
+- [X] PWA
 - [X] Electron
 
 ## UP-COMING
