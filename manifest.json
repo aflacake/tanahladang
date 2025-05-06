@@ -1,0 +1,16 @@
+{
+    "name": "Tanah Ladang - Gim bertani",
+    "short_name": "Tanah Ladang",
+    "description": "Berladang dengan berpondasikan menanam disetiap grid lantai tanah, konsep petani menanam diladang berpetak 50x50 elektronika, program berbasis JavaScript pengendali utama gim ini.",
+    "start_url": "https://aflacake.github.io/tanahladang/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1EA3A8",
+    "icons": [
+        {
+            "src": "https://raw.githubusercontent.com/aflacake/tanahladang/second/img/logotanahladang.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        }
+    ]
+}
