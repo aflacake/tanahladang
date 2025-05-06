@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', function () {
 console.log("Bahasa Browser" + navigator.language);
 
 
+
+// mengenal pengguna
+if (window.location.pathname === "/index") {
+	console.log("Di halaman utama");
+}
+
+
+
 // cek orientasi perangkat mengharuskan ke lanskap
 function cekOrientasi() {
     if (window.innerWidth > window.innerHeight) {
@@ -136,4 +144,12 @@ function checkConnection() {
 checkConnection();
 window.addEventListener('online', checkConnection);
 window.addEventListener('offline', checkConnection);
+
+
+
+window.addEventListener("beforeunload", function (e) {
+    e.preventDefault();
+    e.returnValue = '';
+});
+
 });

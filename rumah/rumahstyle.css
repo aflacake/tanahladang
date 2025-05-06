@@ -1,0 +1,19 @@
+body {
+    font-family: Times New Roman;
+    background-color: #1EA3A8;
+}
+
+#mulaiBtn {
+    transition: transform 0.4 ease;
+}
+#mulaiBtn:active {
+    transition-duration: 4s ease;
+    transform: scale(.70);
+}
+
+table {
+    padding: 5px;
+    margin: 5px;
+    background-color: white;
+    border: 2px solid #ccc;
+}

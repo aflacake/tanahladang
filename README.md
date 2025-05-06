@@ -1,4 +1,4 @@
-<p align="right">Bahasa Indonesia</p>
+<p align="right">Bahasa: Indonesia</p>
 <img src="https://raw.githubusercontent.com/aflacake/tanahladang/main/img/logotanahladang.png" width="200px" height="200px" alt="logo"/>
 
 # Tanah Ladang
@@ -6,6 +6,7 @@ Berladang dengan berpondasikan menanam disetiap grid lantai tanah, konsep petani
 
 ## Mendukung di
 - [X] Browser Chrome, Firefox, dan Edge
+- [X] PWA
 - [X] Electron
 
 ## UP-COMING

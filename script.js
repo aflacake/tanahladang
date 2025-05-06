@@ -1,3 +1,19 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+    .then(function(reg) {
+        console.log("Service worker terdaftar.", reg);
+
+        navigator.serviceWorker.ready.then(function(reg) {
+            console.log("Service worker sudah aktif dan sudah siap:", reg);
+        });
+    })
+    .catch(function(error) {
+        console.error("Gagal mendaftarkan service worker:", error)
+    });
+}
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
 document.getElementById("index").addEventListener("click", function() {
     window.location.href = "https://aflacake.github.io/tanahladang/tanahladangdex/dexindex.html";
