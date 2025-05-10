@@ -74,7 +74,9 @@ window.addEventListener('click', function(event) {
 function setBackgroundBerdasarkanWaktu() {
     const bgWaktuSaatIni = new Date().getHours();
     const body = document.body;
-    const lanskapMode = document.querySelector("pesanLanskap");
+    const lanskapMode = document.querySelector(".pesanLanskap");
+    lanskapMode.style.padding = '20px';
+
     const headerJud = document.querySelector("headerJud");
     const cuaca = document.querySelector("cuaca")
     
@@ -86,15 +88,15 @@ function setBackgroundBerdasarkanWaktu() {
         body.style.backgroundColor = "#B6200C";
     } else {
         body.style.backgroundColor = "#000000";
-    if (lanskapMode) {
+        if (lanskapMode) {
             lanskapMode.style.color = "white";
-    }
-    if (headerJud) {
-        headerJud.style.color = "white";
-    }
-    if (cuaca) {
-        cuaca.style.color = "white";
-    }
+        }
+        if (headerJud) {
+            headerJud.style.color = "white";
+        }
+        if (cuaca) {
+            cuaca.style.color = "white";
+        }
     }
 }
 setBackgroundBerdasarkanWaktu();
@@ -388,18 +390,18 @@ perbaruiStatusHewan();
 
 
 let levelRumahKambing = localStorage.getItem('levelRumahKambing') ? parseInt(localStorage.getItem('levelRumahKambing')) : 1;
-uangBiayaRumahKambing = 3000;
+let uangBiayaRumahKambing = 3000;
 const levelRumahKambingElement = document.getElementById("levelRumahKambing");
 const levelUpRumahKambingBtn = document.getElementById("rumahKambingUpBtn");
 const rumahKambingImgElement = document.getElementById("rumahKambing");
 
 function upgradeRumahKambingImg() {
     if (levelRumahKambing >= 100) {
-        rumahKambingImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-rumahkambinglvl100.png';
+        rumahKambingImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-rumahkambinglvl100.png';
     } else if(levelRumahKambing >= 50) {
-        rumahKambingImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-rumahkambinglvl50.png';
+        rumahKambingImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-rumahkambinglvl50.png';
     } else {
-        rumahKambingImgElement.src = 'https://github.com/aflacake/tanahladang/raw/second/img/rumahkambing.png';
+        rumahKambingImgElement.src = 'https://github.com/aflacake/tanahladang/raw/main/img/rumahkambing.png';
     }
 }
 
@@ -425,22 +427,22 @@ upgradeRumahKambingImg();
 
 
 let levelPohonRmhBurung = localStorage.getItem('levelPohonRmhBurung') ? parseInt(localStorage.getItem('levelPohonRmhBurung')) : 1;
-uangBiayaPohonBurung = 12000;
+let uangBiayaPohonBurung = 12000;
 const levelPohonBurungElement = document.getElementById("levelPohonBurung");
 const levelUpPohonBurungBtn = document.getElementById("pohonBurungUpBtn");
 const pohonBurungImgElement = document.getElementById("pohonBurung");
 
 function upgradePohonBurungImg() {
     if (levelPohonRmhBurung >= 330) {
-        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohondanrumahburunglvl330.png';
+        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-pohondanrumahburunglvl330.png';
     } else if (levelPohonRmhBurung >= 220) {
-        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohondanrumahburung.png';
+        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-pohondanrumahburung.png';
     } else if (levelPohonRmhBurung >= 110) {
         pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-pohon.png';
     } else if (levelPohonRmhBurung >= 30) {
-        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohontumbuh.png';
+        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-pohontumbuh.png';
     } else {
-        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/second/img/tingkatkan-pohonmati.png';
+        pohonBurungImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-pohonmati.png';
     }
 }
 
@@ -465,8 +467,43 @@ upgradePohonBurungImg();
 
 
 
+let levelKafe = localStorage.getItem('levelKafe') ? parseInt(localStorage.getItem('levelKafe')) : 1;
+uangBiayaKafe = 7000;
+const levelKafeElement = document.getElementById("levelKafe");
+const levelUpKafeBtn = document.getElementById("kafeUpBtn");
+const kafeImgElement = document.getElementById("kafe");
+
+function upgradeKafeImg() {
+    if (levelKafe >= 30) {
+        kafeImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-kafelvl30.png';
+    } else {
+        kafeImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/kafe.png';
+    }
+}
+
+function levelUpBangunKafe() {
+    if (totalUang >= uangBiayaKafe) {
+            levelKafe++;
+            totalUang -= uangBiayaKafe;
+    
+            levelKafeElement.textContent = `${levelKafe}`;
+    
+            localStorage.setItem('levelKafe', levelKafe);
+            localStorage.setItem('totalUang', totalUang);
+
+        upgradeKafeImg();
+    } else {
+        alert("Uang tidak cukup untuk meningkatkan kafe!")
+    }
+}
+levelKafeElement.textContent = `${levelKafe}`;
+levelUpKafeBtn.addEventListener('click', levelUpBangunKafe);
+upgradeKafeImg();
+
+
+
 let levelSumur = localStorage.getItem('levelSumur') ? parseInt(localStorage.getItem('levelSumur')) : 1;
-uangBiayaSumur = 10000;
+let uangBiayaSumur = 10000;
 const levelSumurElement = document.getElementById("levelSumur");
 const levelUpSumurBtn = document.getElementById("levelUpSumur");
 const sumurImgElement = document.getElementById("sumur");
@@ -505,7 +542,7 @@ function beliBibitTanamanMerah() {
         localStorage.setItem('totalUang', totalUang);
         localStorage.setItem('totalBibit', totalBibit);
         document.getElementById('totalUangSpan').textContent = totalUang;
-        alert("Pembelian bibit biasa sah! sisa uang: " + totalUang);
+        console.log("Pembelian bibit biasa sah! sisa uang: " + totalUang);
     
 perbaruiInfoPoinUang();
     
@@ -523,7 +560,7 @@ function beliBibitTanamanMerahSuper() {
         localStorage.setItem('totalUang', totalUang);
         localStorage.setItem('totalBibit', totalBibit);
         document.getElementById('totalUangSpan').textContent = totalUang;
-        alert("Pembelian bibit super sah! sisa uang: " + totalUang);
+        console.log("Pembelian bibit super sah! sisa uang: " + totalUang);
         perbaruiInfoPoinUang();
     } else {
         alert("Uang tidak cukup untuk membeli bibit tanamanMerahSuper"); 

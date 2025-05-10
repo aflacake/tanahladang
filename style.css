@@ -213,15 +213,15 @@ body::-webkit-scrollbar {
     border-radius: 15px 15px 0 0;
     border-top: 10px solid #A46D16;
 }
-    #kotaRumahKambing, #kotaPohonBurung {
+    #kotaRumahKambing, #kotaPohonBurung, #kotaKafe {
         width: 20%;
         display: block;
         padding: 10px;
     }
-        #rumahKambing, #pohonBurung, #sumur {
+        #rumahKambing, #pohonBurung, #kafe, #sumur {
             transition: transform 0.3s ease;
         }
-        #rumahKambing:hover, #pohonBurung:hover, #sumur:hover {
+        #rumahKambing:hover, #pohonBurung:hover, #kafe:hover, #sumur:hover {
             transform: scale(1.2);
         }
     .popPenyimpanan {
@@ -458,17 +458,17 @@ body::-webkit-scrollbar {
         font-size: 16px;
     margin-left: 10px;
     }
-    #rumahKambingBtn, #rumahKambingUpBtn, #pohonBurungUpBtn, #levelUpSumur {
+    #rumahKambingBtn, #rumahKambingUpBtn, #pohonBurungUpBtn, #kafeUpBtn, #levelUpSumur {
             padding: 5px 8px;
             margin-top: 5px;
-             cursor: pointer;
-             background-color: #755727;
-             border: none;
-             border-radius: 5px;
+            cursor: pointer;
+            background-color: #755727;
+            border: none;
+            border-radius: 5px;
     }
-    #rumahKambingBtn:active, #rumahKambingUpBtn:active, #levelUpSumur:active {
+    #rumahKambingBtn:active, #rumahKambingUpBtn:active, #kafeUpBtn:active, #levelUpSumur:active {
              transition-duration: 4s ease;
-              transform: scale(.70);
+             transform: scale(.70);
          }
     
 
