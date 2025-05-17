@@ -474,7 +474,9 @@ const levelUpKafeBtn = document.getElementById("kafeUpBtn");
 const kafeImgElement = document.getElementById("kafe");
 
 function upgradeKafeImg() {
-    if (levelKafe >= 30) {
+    if (levelKafe >= 70) {
+        kafeImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-kafelvl70.png';
+    } else if (levelKafe >= 30) {
         kafeImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/tingkatkan-kafelvl30.png';
     } else {
         kafeImgElement.src = 'https://raw.githubusercontent.com/aflacake/tanahladang/main/img/kafe.png';
