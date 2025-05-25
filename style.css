@@ -4,7 +4,7 @@
 }
 html, body {
     height: 100vh;
-      font-family: times new roman;
+      font-family: Times New Roman;
     overflow: hidden;
 }
 body {
@@ -206,7 +206,7 @@ body::-webkit-scrollbar {
 
 
 .kotaKota {
-    height: 300px;
+    height: 350px;
     display: flex;
     fex-drection: row;
     background-color: #0B932D;
@@ -215,7 +215,7 @@ body::-webkit-scrollbar {
 }
     #kotaRumahKambing, #kotaPohonBurung, #kotaKafe {
         width: 20%;
-        display: block;
+        display: inline-block;
         padding: 10px;
     }
         #rumahKambing, #pohonBurung, #kafe, #sumur {
@@ -248,6 +248,14 @@ body::-webkit-scrollbar {
      #rumahKambingBtn, #rumahKambingUpBtn, #kotaRumahKambing p, #pohonBurungUpBtn, #kotaPohonBurung p {
          margin-left: 10px;
      }
+
+#kucingHitam {
+    display: inline-block;
+    position: relative;
+    left: -10%;
+    top: 50%;
+    transform: translate(-20%, -50%);
+}
 
 
 .tanahLadang {
