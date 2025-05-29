@@ -261,9 +261,9 @@ body::-webkit-scrollbar {
 #tanamKolam {
     display: inline-block;
     position: relative;
-    left: 0%;
+    left: -5%;
     top: 50%;
-    transform: translate(0%, -50%);
+    transform: translate(-5%, -50%);
 }
 
 
@@ -492,7 +492,7 @@ body::-webkit-scrollbar {
    
  /* menu */
  .menuGim {
-     margin-top: 20px;
+     margin: 20px;
      padding: 5px 10px;
      background-color: #755727;
      border: 4px solid #A46D16;
