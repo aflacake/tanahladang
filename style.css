@@ -124,6 +124,7 @@ body::-webkit-scrollbar {
 
 
 #cuaca {
+    color: white;
     padding: 20px;
     font-size: 36px;
     margin-bottom: 20px;
@@ -255,6 +256,14 @@ body::-webkit-scrollbar {
     left: -10%;
     top: 50%;
     transform: translate(-20%, -50%);
+}
+
+#tanamKolam {
+    display: inline-block;
+    position: relative;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
 }
 
 
