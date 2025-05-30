@@ -425,7 +425,6 @@ levelUpRumahKambingBtn.addEventListener('click', levelUpBangunRmhKambing);
 upgradeRumahKambingImg();
 
 
-
 let levelPohonRmhBurung = localStorage.getItem('levelPohonRmhBurung') ? parseInt(localStorage.getItem('levelPohonRmhBurung')) : 1;
 let uangBiayaPohonBurung = 12000;
 const levelPohonBurungElement = document.getElementById("levelPohonBurung");
@@ -466,7 +465,6 @@ levelUpPohonBurungBtn.addEventListener('click', levelUpBangunPohonBurung);
 upgradePohonBurungImg();
 
 
-
 let levelKafe = localStorage.getItem('levelKafe') ? parseInt(localStorage.getItem('levelKafe')) : 1;
 uangBiayaKafe = 7000;
 const levelKafeElement = document.getElementById("levelKafe");
@@ -503,7 +501,6 @@ levelUpKafeBtn.addEventListener('click', levelUpBangunKafe);
 upgradeKafeImg();
 
 
-
 let levelSumur = localStorage.getItem('levelSumur') ? parseInt(localStorage.getItem('levelSumur')) : 1;
 let uangBiayaSumur = 10000;
 const levelSumurElement = document.getElementById("levelSumur");
@@ -533,7 +530,6 @@ function levelUpBangunSumur() {
 }
 levelSumurElement.textContent = `${levelSumur}`;
 levelUpSumurBtn.addEventListener('click', levelUpBangunSumur);
-
 
 
 document.getElementById('totalUangSpan').textContent = totalUang;
@@ -569,4 +565,53 @@ function beliBibitTanamanMerahSuper() {
     }
 }
 document.getElementById('beliBibitSuperBtn').addEventListener('click', beliBibitTanamanMerahSuper);
+
+
+
+// Meong
+console.log("kucingHItam:", document.getElementById("kucingHitam"));
+console.log("PesanMeong:", document.getElementById("PesanMeong"));
+
+const gambarKucingHitam = document.getElementById("kucingHitam");
+const teksKucingHitam = document.getElementById("pesanMeong");
+
+if (gambarKucingHitam && teksKucingHitam) {
+    gambarKucingHitam.addEventListener("click", () => {
+        teksKucingHitam.style.display = "inline-block";
+
+        setTimeout(() => {
+            teksKucingHitam.style.display = "none";
+        }, 5000);
+    });
+} else {
+    console.warn("Element #kucingHitam atau #pesanMeong tidak ditemukan.");
+}
+
+
+
+const tamanElement = document.getElementById("tanamKolam");
+const jumlahUangTaman = 14000;
+let tamanHitungMundur = false;
+const durasiHitungMundur = 90 * 1000;
+
+function tambahUangDariTaman() {
+    if (!tamanHitungMundur) {
+        totalUang += jumlahUangTaman;
+        localStorage.setItem('totalUang', totalUang);
+        perbaruiInfoPoinUang();
+        console.log(`+Rp${jumlahUangTaman} dari kolam! Total uang sekarang: Rp${totalUang}`);
+
+        tamanHitungMundur = true;
+        tamanElement.style.opacity = 0.5;
+
+        setTimeout(() => {
+            tamanHitungMundur = false;
+            tamanElement.style.opacity = 1;
+            console.log("Tanaman bisa diklik lagi!");
+        }, durasiHitungMundur);
+    } else {
+        alert("Tukang kebun sedang bekerja! Tunggu 1.5 menit sebelum bisa mendapatkan uang lagi.");
+    }
+}
+tamanElement.addEventListener("click", tambahUangDariTaman);
 });
