@@ -568,6 +568,27 @@ document.getElementById('beliBibitSuperBtn').addEventListener('click', beliBibit
 
 
 
+// Meong
+console.log("kucingHItam:", document.getElementById("kucingHitam"));
+console.log("PesanMeong:", document.getElementById("PesanMeong"));
+
+const gambarKucingHitam = document.getElementById("kucingHitam");
+const teksKucingHitam = document.getElementById("pesanMeong");
+
+if (gambarKucingHitam && teksKucingHitam) {
+    gambarKucingHitam.addEventListener("click", () => {
+        teksKucingHitam.style.display = "inline-block";
+
+        setTimeout(() => {
+            teksKucingHitam.style.display = "none";
+        }, 5000);
+    });
+} else {
+    console.warn("Element #kucingHitam atau #pesanMeong tidak ditemukan.");
+}
+
+
+
 const tamanElement = document.getElementById("tanamKolam");
 const jumlahUangTaman = 14000;
 let tamanHitungMundur = false;
