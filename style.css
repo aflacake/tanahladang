@@ -257,6 +257,19 @@ body::-webkit-scrollbar {
     top: 50%;
     transform: translate(-20%, -50%);
 }
+    #pesanMeong {
+        position: absolute;
+        display: none;
+        padding: 4px 8px;
+        margin-bottom: 5px;
+        left: 50%;
+        bottom: 100%;
+        transform: translateX(-50%);
+        color: white;
+        justify-content: center;
+        font-size: 14px;
+        white-space: nowrap;
+    }
 
 #tanamKolam {
     display: inline-block;
